@@ -2,27 +2,27 @@ import React from "react";
 
 export function Header() {
   return (
-    <nav classname="navbar navbar-dark navbar-expand-lg">
-      <div classname="container">
-        <a classname="navbar-brand" href>
+    <nav className="navbar navbar-dark navbar-expand-lg">
+      <div className="container">
+        <a className="navbar-brand" href="">
           BookWithMe
         </a>
-        <form classname="form-inline my-2 my-lg-0">
+        <form className="form-inline my-2 my-lg-0">
           <input
-            classname="form-control mr-sm-2 bwm-search"
+            className="form-control mr-sm-2 bwm-search"
             type="search"
-            placeholder="Try ' new york'"
+            placeholder="Try 'New York'"
             aria-label="Search"
           />
           <button
-            classname="btn btn-outline-success my-2 my-sm-0 btn-bwm-search"
+            className="btn btn-outline-success my-2 my-sm-0 btn-bwm-search"
             type="submit"
           >
             Search
           </button>
         </form>
         <button
-          classname="navbar-toggler"
+          className="navbar-toggler"
           type="button"
           data-toggle="collapse"
           data-target="#navbarNavAltMarkup"
@@ -30,14 +30,14 @@ export function Header() {
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span classname="navbar-toggler-icon" />
+          <span className="navbar-toggler-icon" />
         </button>
-        <div classname="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div classname="navbar-nav ml-auto">
-            <a classname="nav-item nav-link active" href>
-              Login <span classname="sr-only">(current)</span>
+        <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div className="navbar-nav ml-auto">
+            <a className="nav-item nav-link active" href="">
+              Login <span className="sr-only">(current)</span>
             </a>
-            <a classname="nav-item nav-link" href>
+            <a className="nav-item nav-link" href="">
               Register
             </a>
           </div>
