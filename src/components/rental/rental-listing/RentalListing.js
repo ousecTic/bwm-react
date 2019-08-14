@@ -26,6 +26,7 @@ class RentalListing extends React.Component {
 //so the component can use it as a props
 function mapStateToProps(state) {
   return {
+    //this is going to be my props
     rentals: state.rentals.data
   };
 }
