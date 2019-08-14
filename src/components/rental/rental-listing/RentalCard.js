@@ -4,9 +4,9 @@ import { Link } from "react-router-dom";
 export function RentalCard({ colNum, rental }) {
   return (
     <div className={colNum}>
-      <Link to={`/rentals/${rental.id}`}>
+      <Link className="rental-detail-link" to={`/rentals/${rental.id}`}>
         <div className="card bwm-card">
-          <img className="card-img-top" src={rental.image} alt="" />
+          <img className="card-img-top" src={rental.image} alt={rental.title} />
           <div className="card-block">
             <h6 className={`card-subtitle ${rental.category}`}>
               {rental.shared ? "shared" : "whole"}

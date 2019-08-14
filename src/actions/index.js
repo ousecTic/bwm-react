@@ -1,6 +1,10 @@
 //actions are just object
 
-import { FETCH_RENTALS, FETCH_RENTALS_BY_ID_SUCCESS } from "./types";
+import {
+  FETCH_RENTALS,
+  FETCH_RENTAL_BY_ID_SUCCESS,
+  FETCH_RENTAL_BY_ID_INIT
+} from "./types";
 
 const rentals = [
   {
@@ -57,6 +61,19 @@ const rentals = [
   }
 ];
 
+const fetchRentalByIdInit = () => {
+  return {
+    type: FETCH_RENTAL_BY_ID_INIT
+  };
+};
+
+const fetchRentalByIdSuccess = rental => {
+  return {
+    type: FETCH_RENTAL_BY_ID_SUCCESS,
+    rental
+  };
+};
+
 export const fetchRentals = () => {
   return {
     type: FETCH_RENTALS,
@@ -66,6 +83,7 @@ export const fetchRentals = () => {
 
 export const fetchRentalById = rentalId => {
   return function(dispatch) {
+    dispatch(fetchRentalByIdInit());
     //this code is to simulate what happens if a code is async
 
     //simulate server call
@@ -74,12 +92,5 @@ export const fetchRentalById = rentalId => {
 
       dispatch(fetchRentalByIdSuccess(rental));
     }, 1000);
-  };
-};
-
-export const fetchRentalByIdSuccess = rental => {
-  return {
-    type: FETCH_RENTALS_BY_ID_SUCCESS,
-    rental
   };
 };

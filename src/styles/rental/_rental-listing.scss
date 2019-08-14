@@ -5,6 +5,12 @@
     margin-bottom: 20px;
   }
 
+  .rental-detail-link {
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
   .bwm-card {
     border: none;
 
@@ -21,6 +27,7 @@
       .card-title {
         font-size: 19px;
         margin: 3px 0;
+        color: $main-text-gray-color;
       }
 
       .card-text {
