@@ -78,10 +78,8 @@ function withGeocode(WrappedComponent) {
     }
 
     getGeocodedLocation() {
-      let location = this.props.location;
-      if (Math.floor(Math.random() * 10) > 5) {
-        location = "jd;lkaf;slkjfa;jd";
-      }
+      const location = this.props.location;
+
       //if location is cached return cached values
       //else geolocation
       if (this.cacher.isValueCached(location)) {
