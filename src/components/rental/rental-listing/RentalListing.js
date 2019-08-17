@@ -6,9 +6,17 @@ import { connect } from "react-redux";
 
 import * as actions from "actions";
 
+//this is a hoc, because it takes
+//a component and returns a new
+//component
+
+//the props can have access to this function {...this.props}
+
 class RentalListing extends React.Component {
   //component did mount
   componentWillMount() {
+    //this is coming from the withAlert function
+
     this.props.dispatch(actions.fetchRentals());
   }
 
